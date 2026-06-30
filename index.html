@@ -2,13 +2,44 @@
 <html lang="en">
 <head>
 
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{
+if(f.fbq)return;
+n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);
+}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '631605323343156');
+
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=631605323343156&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
   <!-- SEO -->
 <title>Lose 8-12 Kgs Naturally in 90 Days | Ankit Pal Fitness</title>
 <meta name="description" content="Personalized nutrition, fat loss coaching, and home workouts for busy working women. Lose 8-12 kgs naturally without extreme dieting.">
 
 <!-- Open Graph for WhatsApp, Facebook, Instagram -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Lose 8-12 Kgs Naturally in 90 Days">
+<meta property="og:title" content="Lose 8-12 Kgs Naturally in 90 Days | Ankit Pal Fitness">
 <meta property="og:description" content="Watch this free video to discover how busy women can lose weight naturally from home without extreme dieting.">
 
 <meta property="og:image" content="https://ankitpalfitness.com/images/video-chat-thumbnail.png">
@@ -17,7 +48,7 @@
 
 <!-- Twitter / X preview -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lose 8-12 Kgs Naturally in 90 Days">
+<meta name="twitter:title" content="Lose 8-12 Kgs Naturally in 90 Days | Ankit Pal Fitness">
 <meta name="twitter:description" content="Watch this free video and discover the method helping busy women lose weight naturally.">
 <meta name="twitter:image" content="https://ankitpalfitness.com/images/video-chat-thumbnail.jpg">
 
@@ -307,6 +338,21 @@
 </div>
 
 <script src="js/script.js"></script>
+<script>
+
+// Track every Calendly button click
+
+document.querySelectorAll('a[href*="calendly"]').forEach(function(btn){
+
+btn.addEventListener("click",function(){
+
+fbq('trackCustom','Calendly_Click');
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
