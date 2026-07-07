@@ -83,18 +83,17 @@ src="https://www.facebook.com/tr?id=631605323343156&ev=PageView&noscript=1"/>
 </section>
 
 <script>
-  // Listen for Calendly events via postMessage and redirect to the confirmation page
+  // Listen for Calendly booking completion and redirect to thank you page
+  // NOTE: Schedule pixel fires on /call-scheduled/ page load only (not here)
+  // This prevents double-counting in Meta Ads Manager
   window.addEventListener('message', function (e) {
     if (e.origin !== 'https://calendly.com') return;
     if (!e.data || !e.data.event) return;
 
     if (e.data.event === 'calendly.event_scheduled') {
-      if (typeof fbq === 'function') {
-        fbq('track', 'Schedule');
-      }
       setTimeout(function () {
         window.location.href = '/call-scheduled/';
-      }, 350);
+      }, 800);
     }
   });
 </script>
